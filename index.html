@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Recommendation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Home Recommendation</a>
+            <div class="nav-links">
+                <a href="#" class="active"><i class="fas fa-home"></i> Home</a>
+                <a href="#explore"><i class="fas fa-search"></i> Explore</a>
+                <a href="#contact"><i class="fas fa-phone"></i> Contact</a>
+                <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+                <a href="#login" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="#signup" id="signupBtn"><i class="fas fa-user-plus"></i> Signup</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Your Dream Home Today</h1>
+                <p>Discover luxury homes in prime locations across the country</p>
+                <a href="#explore" class="btn btn-primary">Start Exploring</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <section id="trending" class="section">
+            <h2>Trending Homes</h2>
+            <div class="trending-slider">
+                <!-- Trending homes will be inserted here by JavaScript -->
+            </div>
+        </section>
+
+        <section id="explore" class="section">
+            <h2>Explore Homes</h2>
+            <div class="filters">
+                <input type="number" id="price-filter" placeholder="Max Price (₹)" class="filter-input">
+                <select id="city-filter" class="filter-input">
+                    <option value="">Select City</option>
+                </select>
+                <select id="state-filter" class="filter-input">
+                    <option value="">Select State</option>
+                </select>
+            </div>
+            <div class="houses-grid">
+                <!-- Houses will be inserted here by JavaScript -->
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-image">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85" alt="Agent">
+                </div>
+                <div class="contact-form">
+                    <h3>Get in Touch</h3>
+                    <p>Our real estate experts are here to help you find your perfect home.</p>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Home Recommendation</h2>
+            <div class="about-content">
+                <p class="lead">
+                    Home Recommendation is your trusted partner in finding the perfect home.
+                    We specialize in analyzing and recommending properties that match your
+                    preferences and lifestyle, making your home search experience efficient
+                    and enjoyable.
+                </p>
+                <div class="about-images">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40" alt="Our Team">
+                    <img src="https://images.unsplash.com/photo-1526948531399-320e7e40f0ca" alt="Our Office">
+                    <img src="https://images.unsplash.com/photo-1507149833265-60c372daea22" alt="Featured Home">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- House Dialog Template -->
+    <div id="house-dialog" class="dialog">
+        <div class="dialog-content">
+            <span class="close-dialog">&times;</span>
+            <div class="dialog-body">
+                <!-- House details will be inserted here by JavaScript -->
+            </div>
+            <div id="house-map" class="house-map"></div>
+            <button class="btn btn-primary buy-now-btn">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Login Dialog -->
+    <div id="login-dialog" class="dialog">
+        <div class="dialog-content">
+            <span class="close-dialog">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Dialog -->
+    <div id="signup-dialog" class="dialog">
+        <div class="dialog-content">
+            <span class="close-dialog">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signup-form" class="auth-form">
+                <div class="form-group">
+                    <label for="signup-name">Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
