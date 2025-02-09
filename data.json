@@ -1,0 +1,96 @@
+{
+    "houses": [
+      {
+        "id": 1,
+        "title": "Luxury Villa in South Delhi",
+        "description": "Stunning modern villa with garden views",
+        "price": 45000000,
+        "city": "Delhi",
+        "state": "Delhi",
+        "beds": 4,
+        "baths": 3,
+        "sqft": 3500,
+        "image": "https://images.unsplash.com/photo-1513584684374-8bab748fbf90",
+        "trending": 1
+      },
+      {
+        "id": 2,
+        "title": "Sea View Apartment in Mumbai",
+        "description": "High-rise living with ocean views",
+        "price": 75000000,
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "beds": 3,
+        "baths": 2,
+        "sqft": 2200,
+        "image": "https://images.unsplash.com/photo-1494526585095-c41746248156",
+        "trending": 1
+      },
+      {
+        "id": 3,
+        "title": "Garden City Villa",
+        "description": "Architectural masterpiece in prime location",
+        "price": 35000000,
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "beds": 5,
+        "baths": 4,
+        "sqft": 4500,
+        "image": "https://images.unsplash.com/photo-1566908829550-e6551b00979b",
+        "trending": 1
+      },
+      {
+        "id": 4,
+        "title": "Beachside Residence",
+        "description": "Luxurious beachfront property with modern amenities",
+        "price": 55000000,
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "beds": 4,
+        "baths": 4,
+        "sqft": 3800,
+        "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750",
+        "trending": 0
+      },
+      {
+        "id": 5,
+        "title": "Modern Tech Park Home",
+        "description": "Contemporary living near IT hub",
+        "price": 42000000,
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "beds": 3,
+        "baths": 3,
+        "sqft": 2800,
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+        "trending": 0
+      },
+      {
+        "id": 6,
+        "title": "Riverside Mansion",
+        "description": "Elegant property with river views",
+        "price": 38000000,
+        "city": "Ahmedabad",
+        "state": "Gujarat",
+        "beds": 5,
+        "baths": 4,
+        "sqft": 4200,
+        "image": "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09",
+        "trending": 0
+      },
+      {
+        "id": 7,
+        "title": "Heritage Colony House",
+        "description": "Classic Bengali architecture with modern touches",
+        "price": 32000000,
+        "city": "Kolkata",
+        "state": "West Bengal",
+        "beds": 4,
+        "baths": 3,
+        "sqft": 3200,
+        "image": "https://images.unsplash.com/photo-1518780664697-55e3ad937233",
+        "trending": 0
+      }
+    ]
+  }
+  
